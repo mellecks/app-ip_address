@@ -61,19 +61,19 @@ function getIpv4MappedIpv6Address(ipv4) {
       }
     }
     if (validQuads) {
-      ipv6address = "0:0:0:0:0:ffff:";
+      ipv6Address = "0:0:0:0:0:ffff:";
       for(let i=0; i < numIpv4Segments; i++) {
         let hexString = parseInt(ipv4Quads[i]).toString(16);
         if(hexString.length % 2)
           hexString = '0' + hexString;
         if(i==1) {
-          ipv6address = ipv6Address + ':';
+          ipv6Address = ipv6Address + ':';
         }  
       }
     }
   }
 }  
-return ipv6address;
+return ipv6Address;
 
 function main() {
   // Creat an array of tests with both valid CIDR and invalid IP subnets.
