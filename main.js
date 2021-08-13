@@ -7,11 +7,13 @@ import the ip-cidr npm package.
 const IPCIDR = require('ip-cidr');
 
 /**
- * Calculate and return the first host IP address from a CIDR subnet.
- * @param {string} cidrStr - The IPv4 subnet expressed
- *                 in CIDR format.
+ * @name getFirstIpAddress
+ * @description Calculates and returns the first hose IP address from a CIDR subnet along with the associated ipv6 address.
+ * @param {string} cidrStr - The IPv4 subnet expressed in CIDR format.
  * @param {callback} callback - A callback function.
- * @return {string} (firstIpAddress) - An IPv4 address.
+ * @param {object} mappedIpAddress 
+ * @return {object} - An Object containing both an IPv4 address and its mapped ipv6 address.
+ * @example const cidr = '172.16.1.0/24';
  */
 function getFirstIpAddress(cidrStr, callback) {
 
