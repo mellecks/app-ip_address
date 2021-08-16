@@ -1,33 +1,3 @@
-module.exports.getIpv4MappedIpv6Address = getIpv4MappedIpv6Address;
-
-<<<<<<< HEAD
-/**
-=======
-/*/**
->>>>>>> 47946906197f8ba2cf89120f191ce96b8f86071a
- * Calculates an IPv4-mapped IPv6 address.
- * @param {string} ipv4 - An IPv4 address in dotted-quad format.
- * @return {*} (ipv6Address) - An IPv6 address string or null if a run-time problem was detected.
- */
-
-/*
-<<<<<<< HEAD
-=======
-  This section is used to test function and log any errors.
-  We will make several positive and negative tests.
-*/*
->>>>>>> 47946906197f8ba2cf89120f191ce96b8f86071a
-module.exports.getIpv4MappedIpv6Address = getIpv4MappedIpv6Address;
- * Calculates an IPv4-mapped IPv6 address.
- * @param {string} ipv4 - An IPv4 address in dotted-quad format.
- * @return {*} (ipv6Address) - An IPv6 address string or null if a run-time problem was detected.
- */
-
-/*
-  This section is used to test function and log any errors.
-  We will make several positive and negative tests.
-*/
-
 function getIpv4MappedIpv6Address(ipv4) {
 
   // Initialize return argument
@@ -71,7 +41,4 @@ function getIpv4MappedIpv6Address(ipv4) {
   }
   return ipv6Address;
 }
-<<<<<<< HEAD
-=======
 module.exports.getIpv4MappedIpv6Address = getIpv4MappedIpv6Address;
->>>>>>> 47946906197f8ba2cf89120f191ce96b8f86071a
