@@ -23,15 +23,7 @@ const { getIpv4MappedIpv6Address } = require(path.join(__dirname, 'ipv6.js'));
 */
 const IPCIDR = require('ip-cidr');
 
-/**
- * @name getFirstIpAddress
- * @description Calculates and returns the first hose IP address from a CIDR subnet along with the associated ipv6 address.
- * @param {string} cidrStr - The IPv4 subnet expressed in CIDR format.
- * @param {callback} callback - A callback function.
- * @param {object} mappedIpAddress 
- * @return {object} - An Object containing both an IPv4 address and its mapped ipv6 address.
- * @example const cidr = '172.16.1.0/24';
- */
+
 
 
 function getFirstIpAddress(cidrStr, callback) {
@@ -82,7 +74,24 @@ function getFirstIpAddress(cidrStr, callback) {
 */
 
 class IpAddress {
-  constructor(getFirstIpAddress(cidrStr, callback) {
+  constructor()  {
+    // IAP's global log object is used to output errors, warnings, and other
+    // information to the console, IAP's log files, or a Syslog server.
+    // For more information, consult the Log Class guide on the Itential
+    // Developer Hub https://developer.itential.io/ located
+    // under Documentation -> Developer Guides -> Log Class Guide
+    log.info('Starting the IpAddress product.');
+  }
+  /**
+  * @name getFirstIpAddress
+  * @description Calculates and returns the first hose IP address from a CIDR subnet along with the associated ipv6 address.
+  * @param {string} cidrStr - The IPv4 subnet expressed in CIDR format.
+  * @param {callback} callback - A callback function.
+  * @param {object} mappedIpAddress 
+  * @return {object} - An Object containing both an IPv4 address and its mapped ipv6 address.
+  * @example const cidr = '172.16.1.0/24';
+  */
+  getFirstIpAddress(cidrStr, callback) {
 
     // Initialize return arguments for callback
     let firstIpAddress = null;
@@ -115,13 +124,6 @@ class IpAddress {
     // data as the second argument to the callback function.
     const mappedIpAddress = {'ipv4': firstIpAddress, 'ipv6': ipv6};
     return callback(mappedIpAddress, callbackError);
-  })  {
-    // IAP's global log object is used to output errors, warnings, and other
-    // information to the console, IAP's log files, or a Syslog server.
-    // For more information, consult the Log Class guide on the Itential
-    // Developer Hub https://developer.itential.io/ located
-    // under Documentation -> Developer Guides -> Log Class Guide
-    log.info('Starting the IpAddress product.');
   }
 }
 

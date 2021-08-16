@@ -1,4 +1,13 @@
-function getIpv4MappedIpv6Address(ipv4) {
+/**
+ * @name getFirstIpAddress
+ * @description Calculates and returns the first hose IP address from a CIDR subnet along with the associated ipv6 address.
+ * @param {string} cidrStr - The IPv4 subnet expressed in CIDR format.
+ * @param {callback} callback - A callback function.
+ * @param {object} mappedIpAddress 
+ * @return {object} - An Object containing both an IPv4 address and its mapped ipv6 address.
+ * @example const cidr = '172.16.1.0/24';
+ */
+ function getIpv4MappedIpv6Address(ipv4) {
 
   // Initialize return argument
   let ipv6Address = null;
