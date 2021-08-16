@@ -15,7 +15,6 @@ const path = require('path');
  */
 const { getIpv4MappedIpv6Address } = require(path.join(__dirname, 'ipv6.js'));
 
-
 /*
   import the ip-cidr npm package.
   See https://www.npmjs.com/package/ip-cidr
@@ -69,6 +68,18 @@ function getFirstIpAddress(cidrStr, callback) {
   const mappedIpAddress = {'ipv4': firstIpAddress, 'ipv6': ipv6};
   return callback(mappedIpAddress, callbackError);
 }
+
+
+/**
+ * Calculates an IPv4-mapped IPv6 address.
+ * @param {string} ipv4 - An IPv4 address in dotted-quad format.
+ * @return {*} (ipv6Address) - An IPv6 address string or null if a run-time problem was detected.
+ */
+
+/*
+  This section is used to test function and log any errors.
+  We will make several positive and negative tests.
+*/
 
 function main() {
   // Create some test data for getFirstIpAddress(), both valid and invalid.
